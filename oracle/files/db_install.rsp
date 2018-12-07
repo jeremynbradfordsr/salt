@@ -103,7 +103,7 @@ oracle.install.db.OSKMDBA_GROUP=dba
 #------------------------------------------------------------------------------
 # The OSRACDBA_GROUP is the OS group which is to be granted SYSRAC privileges.
 #------------------------------------------------------------------------------
-oracle.install.db.OSRACDBA_GROUP=dba
+oracle.install.db.OSRACDBA_GROUP=
 
 ###############################################################################
 #                                                                             #
@@ -340,7 +340,7 @@ oracle.install.db.config.starterdb.storageType=FILE_SYSTEM_STORAGE
 # Applicable only when oracle.install.db.config.starterdb.storage=
 #-------------------------------------------------------------------------------
 oracle.install.db.config.starterdb.fileSystemStorage.dataLocation=/u01/app/oracle/oradata
-D
+
 #-------------------------------------------------------------------------------
 # Specify the recovery location.
 #
