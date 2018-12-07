@@ -40,3 +40,8 @@ dba:
     - addusers:
       - oracle
       - racdbs
+ 
+ run_installer:
+  cmd.run:
+    - name: usermod -g oinstall oracle
+ 
