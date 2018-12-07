@@ -4,4 +4,5 @@ base:
   'oracle*':
     - oracle.pam
     - oracle.ulimit
-    - oracle.server
+    - createFolders
+    - oracleInstsll
