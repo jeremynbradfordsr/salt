@@ -9,14 +9,6 @@ oracle:
     - uid: 4000
     - gid: 4000
     
-grid:
-  user.present:
-    - fullname: Oracle Grid
-    - shell: /bin/zsh
-    - home: /home/oracle
-    - uid: 4001
-    - gid: 4001
-
 oinstall:
   group.present:
     - gid: 7648
@@ -27,7 +19,7 @@ oinstall:
 
 racdbs:
   group.present:
-    - gid: 7649
+    - gid: 7659
     - system: False
     - addusers:
       - grid
@@ -35,20 +27,20 @@ racdbs:
 
 dba:
   group.present:
-    - gid: 7649
+    - gid: 7679
     - system: False
     - addusers:
       - oracle
 
 osoper:
   group.present:
-    - gid: 7649
+    - gid: 7689
     - system: False
     - addusers:
       - oracle
      
  
- Assign preinstall primary group:
+ Assign oracle pre-install primary group:
   cmd.run:
     - name: usermod -g oinstall oracle
  
