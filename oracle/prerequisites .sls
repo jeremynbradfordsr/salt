@@ -129,3 +129,6 @@ oracle:
      - sysstat
      - tcp_wrappers
      - unzip
+
+disabled:
+    selinux.mode
