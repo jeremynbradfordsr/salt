@@ -194,7 +194,7 @@ oracle.install.db.config.starterdb.SID=dbtest
 # The value can be either "true" or "false". If left blank it will be assumed
 # to be "false".
 #-------------------------------------------------------------------------------
-oracle.install.db.ConfigureAsContainerDB=false
+oracle.install.db.ConfigureAsContainerDB=
 
 #-------------------------------------------------------------------------------
 # Specify the  Pluggable Database name for the pluggable database in Container Database.
@@ -229,7 +229,7 @@ oracle.install.db.config.starterdb.memoryOption=true
 # on the system.
 # Example: oracle.install.db.config.starterdb.memoryLimit=512
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.memoryLimit=4192
+oracle.install.db.config.starterdb.memoryLimit=1024
 
 #-------------------------------------------------------------------------------
 # This variable controls whether to load Example Schemas onto
@@ -272,12 +272,12 @@ oracle.install.db.config.starterdb.password.SYSTEM=#mkXF4\pBP;EstNx
 # Specify the DBSNMP password for the starter database.
 # Applicable only when oracle.install.db.config.starterdb.managementOption=CLOUD_CONTROL
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.DBSNMP=c)q"W?M3],Hg27m{
+oracle.install.db.config.starterdb.password.DBSNMP=
 
 #-------------------------------------------------------------------------------
 # Specify the PDBADMIN password required for creation of Pluggable Database in the Container Database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.PDBADMIN=mRsWAgN5Cw8[!)"#
+oracle.install.db.config.starterdb.password.PDBADMIN=
 
 #-------------------------------------------------------------------------------
 # Specify the management option to use for managing the database.
