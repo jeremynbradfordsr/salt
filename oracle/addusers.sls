@@ -39,9 +39,16 @@ dba:
     - system: False
     - addusers:
       - oracle
-      - racdbs
+
+osoper:
+  group.present:
+    - gid: 7649
+    - system: False
+    - addusers:
+      - oracle
+     
  
- run_installer:
+ Assign preinstall primary group:
   cmd.run:
     - name: usermod -g oinstall oracle
  
