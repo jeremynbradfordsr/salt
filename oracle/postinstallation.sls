@@ -1,8 +1,8 @@
-run orainstRoot
+run orainstRoot:
   cmd.run:
     - name: /u01/app/oraInventory/orainstRoot.sh
     
-run root.sh :
+run root.sh:
   cmd.run:
     - name: /u01/app/oracle/product/12.2.0/dbhome_1/root.sh
     
