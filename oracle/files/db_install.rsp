@@ -27,28 +27,28 @@ oracle.install.responseFileVersion=/oracle/install/rspfmt_dbinstall_response_sch
 #   - INSTALL_DB_AND_CONFIG
 #   - UPGRADE_DB
 #-------------------------------------------------------------------------------
-oracle.install.option=
+oracle.install.option=INSTALL_DB_AND_CONFIG
 
 #-------------------------------------------------------------------------------
 # Specify the Unix group to be set for the inventory directory.
 #-------------------------------------------------------------------------------
-UNIX_GROUP_NAME=oracle
+UNIX_GROUP_NAME=oinstall
 
 #-------------------------------------------------------------------------------
 # Specify the location which holds the inventory files.
 # This is an optional parameter if installing on
 # Windows based Operating System.
 #-------------------------------------------------------------------------------
-INVENTORY_LOCATION=
+INVENTORY_LOCATION=/u01/app/oraInventory
 #-------------------------------------------------------------------------------
 # Specify the complete path of the Oracle Home.
 #-------------------------------------------------------------------------------
-ORACLE_HOME=
+ORACLE_HOME=/u01/app/oracle/product/12.2.0/dbhome_1
 
 #-------------------------------------------------------------------------------
 # Specify the complete path of the Oracle Base.
 #-------------------------------------------------------------------------------
-ORACLE_BASE=/opt/orace
+ORACLE_BASE=/u01/app/oracle
 
 #-------------------------------------------------------------------------------
 # Specify the installation edition of the component.
@@ -60,7 +60,7 @@ ORACLE_BASE=/opt/orace
 
 #-------------------------------------------------------------------------------
 
-oracle.install.db.InstallEdition=
+oracle.install.db.InstallEdition=EE
 ###############################################################################
 #                                                                             #
 # PRIVILEGED OPERATING SYSTEM GROUPS                                          #
@@ -77,33 +77,33 @@ oracle.install.db.InstallEdition=
 #------------------------------------------------------------------------------
 # The OSDBA_GROUP is the OS group which is to be granted SYSDBA privileges.
 #-------------------------------------------------------------------------------
-oracle.install.db.OSDBA_GROUP=oracle
+oracle.install.db.OSDBA_GROUP=dba
 
 #------------------------------------------------------------------------------
 # The OSOPER_GROUP is the OS group which is to be granted SYSOPER privileges.
 # The value to be specified for OSOPER group is optional.
 #------------------------------------------------------------------------------
-oracle.install.db.OSOPER_GROUP=
+oracle.install.db.OSOPER_GROUP=dba
 
 #------------------------------------------------------------------------------
 # The OSBACKUPDBA_GROUP is the OS group which is to be granted SYSBACKUP privileges.
 #------------------------------------------------------------------------------
-oracle.install.db.OSBACKUPDBA_GROUP=
+oracle.install.db.OSBACKUPDBA_GROUP=dba
 
 #------------------------------------------------------------------------------
 # The OSDGDBA_GROUP is the OS group which is to be granted SYSDG privileges.
 #------------------------------------------------------------------------------
-oracle.install.db.OSDGDBA_GROUP=
+oracle.install.db.OSDGDBA_GROUP=dba
 
 #------------------------------------------------------------------------------
 # The OSKMDBA_GROUP is the OS group which is to be granted SYSKM privileges.
 #------------------------------------------------------------------------------
-oracle.install.db.OSKMDBA_GROUP=
+oracle.install.db.OSKMDBA_GROUP=dba
 
 #------------------------------------------------------------------------------
 # The OSRACDBA_GROUP is the OS group which is to be granted SYSRAC privileges.
 #------------------------------------------------------------------------------
-oracle.install.db.OSRACDBA_GROUP=
+oracle.install.db.OSRACDBA_GROUP=dba
 
 ###############################################################################
 #                                                                             #
@@ -177,24 +177,24 @@ oracle.install.db.rac.serverpoolCardinality=
 # GENERAL_PURPOSE: A starter database designed for general purpose use or transaction-heavy applications.
 # DATA_WAREHOUSE : A starter database optimized for data warehousing applications.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.type=
+oracle.install.db.config.starterdb.type=GENERAL_PURPOSE
 
 #-------------------------------------------------------------------------------
 # Specify the Starter Database Global Database Name.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.globalDBName=
+oracle.install.db.config.starterdb.globalDBName=dbtest
 
 #-------------------------------------------------------------------------------
 # Specify the Starter Database SID.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.SID=
+oracle.install.db.config.starterdb.SID=dbtest
 
 #-------------------------------------------------------------------------------
 # Specify whether the database should be configured as a Container database.
 # The value can be either "true" or "false". If left blank it will be assumed
 # to be "false".
 #-------------------------------------------------------------------------------
-oracle.install.db.ConfigureAsContainerDB=
+oracle.install.db.ConfigureAsContainerDB=false
 
 #-------------------------------------------------------------------------------
 # Specify the  Pluggable Database name for the pluggable database in Container Database.
@@ -213,7 +213,7 @@ oracle.install.db.config.PDBName=
 #  KO16MSWIN949, ZHS16GBK, TH8TISASCII, ZHT32EUC, ZHT16MSWIN950,
 #  ZHT16HKSCS, WE8ISO8859P9, TR8MSWIN1254, VN8MSWIN1258
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.characterSet=
+oracle.install.db.config.starterdb.characterSet=AL32UTF8
 
 #------------------------------------------------------------------------------
 # This variable should be set to true if Automatic Memory Management
@@ -221,7 +221,7 @@ oracle.install.db.config.starterdb.characterSet=
 # If Automatic Memory Management is not desired, and memory allocation
 # is to be done manually, then set it to false.
 #------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.memoryOption=
+oracle.install.db.config.starterdb.memoryOption=true
 
 #-------------------------------------------------------------------------------
 # Specify the total memory allocation for the database. Value(in MB) should be
@@ -229,7 +229,7 @@ oracle.install.db.config.starterdb.memoryOption=
 # on the system.
 # Example: oracle.install.db.config.starterdb.memoryLimit=512
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.memoryLimit=
+oracle.install.db.config.starterdb.memoryLimit=4192
 
 #-------------------------------------------------------------------------------
 # This variable controls whether to load Example Schemas onto
@@ -256,28 +256,28 @@ oracle.install.db.config.starterdb.installExampleSchemas=
 # This variable holds the password that is to be used for all schemas in the
 # starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.ALL=
+oracle.install.db.config.starterdb.password.ALL=.!8:a~&u.cG"RQkG
 
 #-------------------------------------------------------------------------------
 # Specify the SYS password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYS=
+oracle.install.db.config.starterdb.password.SYS=BJR@aj<ky7/.QUy7
 
 #-------------------------------------------------------------------------------
 # Specify the SYSTEM password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYSTEM=
+oracle.install.db.config.starterdb.password.SYSTEM=#mkXF4\pBP;EstNx
 
 #-------------------------------------------------------------------------------
 # Specify the DBSNMP password for the starter database.
 # Applicable only when oracle.install.db.config.starterdb.managementOption=CLOUD_CONTROL
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.DBSNMP=
+oracle.install.db.config.starterdb.password.DBSNMP=c)q"W?M3],Hg27m{
 
 #-------------------------------------------------------------------------------
 # Specify the PDBADMIN password required for creation of Pluggable Database in the Container Database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.PDBADMIN=
+oracle.install.db.config.starterdb.password.PDBADMIN=mRsWAgN5Cw8[!)"#
 
 #-------------------------------------------------------------------------------
 # Specify the management option to use for managing the database.
@@ -285,7 +285,7 @@ oracle.install.db.config.starterdb.password.PDBADMIN=
 # 1. CLOUD_CONTROL - If you want to manage your database with Enterprise Manager Cloud Control along with Database Express.
 # 2. DEFAULT   -If you want to manage your database using the default Database Express option.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.managementOption=
+oracle.install.db.config.starterdb.managementOption=DEFAULT
 
 #-------------------------------------------------------------------------------
 # Specify the OMS host to connect to Cloud Control.
@@ -323,7 +323,7 @@ oracle.install.db.config.starterdb.emAdminPassword=
 # This variable is to be set to false if database recovery is not required. Else
 # this can be set to true.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.enableRecovery=
+oracle.install.db.config.starterdb.enableRecovery=true
 
 #-------------------------------------------------------------------------------
 # Specify the type of storage to use for the database.
@@ -331,22 +331,22 @@ oracle.install.db.config.starterdb.enableRecovery=
 #   - FILE_SYSTEM_STORAGE
 #   - ASM_STORAGE
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.storageType=
+oracle.install.db.config.starterdb.storageType=FILE_SYSTEM_STORAGE
 
 #-------------------------------------------------------------------------------
 # Specify the database file location which is a directory for datafiles, control
 # files, redo logs.
 #
-# Applicable only when oracle.install.db.config.starterdb.storage=FILE_SYSTEM_STORAGE
+# Applicable only when oracle.install.db.config.starterdb.storage=
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.fileSystemStorage.dataLocation=
-
+oracle.install.db.config.starterdb.fileSystemStorage.dataLocation=/u01/app/oracle/oradata
+D
 #-------------------------------------------------------------------------------
 # Specify the recovery location.
 #
 # Applicable only when oracle.install.db.config.starterdb.storage=FILE_SYSTEM_STORAGE
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.fileSystemStorage.recoveryLocation=
+oracle.install.db.config.starterdb.fileSystemStorage.recoveryLocation=/u01/app/oracle/recovery_area
 
 #-------------------------------------------------------------------------------
 # Specify the existing ASM disk groups to be used for storage.
@@ -383,7 +383,7 @@ MYORACLESUPPORT_PASSWORD=
 #
 # Example    : SECURITY_UPDATES_VIA_MYORACLESUPPORT=true
 #------------------------------------------------------------------------------
-SECURITY_UPDATES_VIA_MYORACLESUPPORT=
+SECURITY_UPDATES_VIA_MYORACLESUPPORT=false
 
 #------------------------------------------------------------------------------
 # Specify whether user doesn't want to configure Security Updates.
@@ -395,7 +395,7 @@ SECURITY_UPDATES_VIA_MYORACLESUPPORT=
 #
 # Example    : DECLINE_SECURITY_UPDATES=false
 #------------------------------------------------------------------------------
-DECLINE_SECURITY_UPDATES=
+DECLINE_SECURITY_UPDATES=true
 
 #------------------------------------------------------------------------------
 # Specify the Proxy server name. Length should be greater than zero.
