@@ -1,14 +1,10 @@
-
-
-
-
-copy oraInstall file:
+copy Oracle installation archive:
   file.managed:
     - name: /tmp/
     - source: salt://binaries/oracle/linuxx64_12201_database.zip
     - backup: minion
 
-copy oraInstall file:
+copy Oracle response file:
   file.managed:
     - name: /tmp/
     - source: salt://oracle/dbInstall.rsp
@@ -18,7 +14,6 @@ unzip Oracle Installation archive:
   archive.extracted:
     - name: /tmp/
     - source: salt://binaries/oracle/linuxx64_12201_database.zip
-    - user: oracle
     - archive_format: zip
 
 oraInstall:
